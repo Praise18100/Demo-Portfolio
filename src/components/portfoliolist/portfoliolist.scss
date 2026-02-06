@@ -1,0 +1,19 @@
+@use "../../global.scss" as *;
+.portfoliolist{
+      font-size: 15px;
+      margin-right: 5opx;
+      padding:  7px;
+      border-radius: 10px;
+      cursor: pointer;
+
+    @include mobile{
+      margin-right: 2opx;
+    }
+
+
+      &.active{
+        background-color: $mainColor;
+        color: white;
+      }
+      
+    }
