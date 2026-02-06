@@ -29,6 +29,7 @@
     height: 350px;
     display: flex;
     position: absolute;
+    scroll-snap-type: y mandatory;
     left: 0;
     transition: all 1s ease-out;
 
