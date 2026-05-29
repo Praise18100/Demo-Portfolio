@@ -1,78 +1,138 @@
 @use "../../global.scss" as *;
-.portfolio{
-  background-color: white;
+
+.portfolio {
+  background: linear-gradient(140deg, #ffffff 0%, #f4fbff 52%, #eef8f3 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  border: 1px solid rgba(19, 33, 58, 0.08);
+  box-shadow: 0 18px 44px rgba(17, 31, 54, 0.12);
+  position: relative;
+  overflow: hidden;
 
-  h1{
-    font-size: 50px;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(31, 167, 149, 0.16) 0%, rgba(31, 167, 149, 0) 70%);
+    top: -170px;
+    right: -120px;
+    pointer-events: none;
+  }
 
-    @include mobile{
-    font-size: 20px;
+  h1 {
+    font-size: clamp(2rem, 3.6vw, 3.3rem);
+    letter-spacing: -0.02em;
+    color: #13213a;
+    margin-bottom: 8px;
+    z-index: 1;
+
+    @include mobile {
+      font-size: 30px;
+    }
   }
+
+  p {
+    color: #4a5a75;
+    font-size: 16px;
+    margin-bottom: 12px;
+    text-align: center;
+    z-index: 1;
+    padding: 0 12px;
   }
-  ul{
+
+  ul {
     margin: 10px;
     padding: 0;
     list-style: none;
     display: flex;
+    gap: 12px;
+    z-index: 1;
 
-    @include mobile{
-    margin: 10px 0;
-    flex-wrap: wrap;
-    justify-content: center;
-
+    @include mobile {
+      margin: 8px 0 18px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
 
-  }
-  .container{
-    width: 70%;
+  .container {
+    width: min(1080px, 88%);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 18px;
+    z-index: 1;
 
-    @include mobile{
-    width: 100%;
-  }
+    @include mobile {
+      width: 100%;
+      gap: 12px;
+    }
 
-    .item{
-      width: 220px;
-      height: 150px;
-      border-radius: 20px;
-      border: 1px solid lightgrey;
-      margin: 10px 20px;
+    .item {
+      width: min(260px, 100%);
+      aspect-ratio: 16 / 10;
+      border-radius: 18px;
+      border: 1px solid rgba(15, 23, 42, 0.1);
       display: flex;
       align-items: center;
       justify-content: center;
-      color: white;
+      color: #ffffff;
       position: relative;
-      transition: all .5s ease;
+      transition: transform 0.35s ease;
       cursor: pointer;
+      overflow: hidden;
+      box-shadow: 0 14px 30px rgba(15, 23, 42, 0.12);
 
-      @include mobile{
-    width: 130px;
-    height: 100px;
-  }
-
-      h3{
-        position: absolute;
-        font-size: 20px
+      @include mobile {
+        width: calc(50% - 10px);
+        min-width: 140px;
       }
 
-      img{
+      h3 {
+        position: absolute;
+        font-size: 18px;
+        text-align: center;
+        padding: 0 14px;
+        z-index: 2;
+        opacity: 0;
+        transform: translateY(8px);
+        transition: all 0.3s ease;
+        text-shadow: 0 8px 20px rgba(0, 0, 0, 0.45);
+
+        @include mobile {
+          font-size: 13px;
+          opacity: 1;
+          transform: none;
+        }
+      }
+
+      img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         z-index: 1;
+        transition: all 0.45s ease;
       }
-      
-      &:hover{
-        background-color: $mainColor;
-        img{
-          opacity: 0.2;
+
+      &:hover {
+        transform: translateY(-5px);
+
+        img {
+          opacity: 0.24;
           z-index: 0;
+          transform: scale(1.04);
+          filter: saturate(120%);
+        }
+
+        h3 {
+          opacity: 1;
+          transform: translateY(0);
         }
       }
     }

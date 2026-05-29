@@ -52,6 +52,7 @@ export default function Portfolio() {
   return (
     <div className="portfolio" id="portfolio">
       <h1>Portfolio</h1>
+      <p>Selected work across product design, frontend engineering, and content.</p>
 
       <ul>
         {list.map((item) => (

@@ -1,20 +1,34 @@
 @import "../../global.scss";
+
 .testimonials {
-  background-color: white;
+  background: linear-gradient(160deg, #ffffff 0%, #f2f9ff 54%, #eefbf7 100%);
   display: flex;
   align-items: center;
   flex-direction: column;
+  border-radius: 30px;
+  border: 1px solid rgba(19, 33, 58, 0.08);
+  box-shadow: 0 18px 44px rgba(17, 31, 54, 0.12);
+  justify-content: center;
 
-   @include mobile {
-      justify-content: space-around;
-    }
+  @include mobile {
+    justify-content: space-around;
+  }
 
   h1 {
-    font-size: 50px;
+    font-size: clamp(2rem, 3.4vw, 3.2rem);
+    margin-bottom: 6px;
+    color: #13213a;
 
     @include mobile {
-      font-size: 20px;
+      font-size: 30px;
     }
+  }
+
+  p {
+    color: #4a5a75;
+    margin-bottom: 18px;
+    text-align: center;
+    padding: 0 16px;
   }
 
   .container {
@@ -30,15 +44,17 @@
     }
 
     .card {
-      width: 250px;
+      width: 290px;
       height: 70%;
-      border-radius: 10px;
-      box-shadow: 0px 0px 15px -8px black;
+      border-radius: 18px;
+      border: 1px solid rgba(15, 23, 42, 0.08);
+      box-shadow: 0 12px 28px rgba(15, 23, 42, 0.12);
+      background: rgba(255, 255, 255, 0.9);
       display: flex;
       flex-direction: column;
       justify-content: space-around;
-      padding: 20px;
-      transition: all 1s ease;
+      padding: 22px;
+      transition: all 0.4s ease;
 
       @include mobile {
         height: 180px;
@@ -46,9 +62,11 @@
       }
 
       &.featured {
-        width: 300px;
+        width: 338px;
         height: 75%;
-        margin: 0 30px;
+        margin: 0 18px;
+        border-color: rgba(15, 118, 110, 0.28);
+        box-shadow: 0 20px 38px rgba(15, 118, 110, 0.2);
 
         @include mobile {
           width: 250px;
@@ -58,8 +76,9 @@
       }
 
       &:hover {
-        transform: scale(1.1);
+        transform: translateY(-8px);
       }
+
       .top {
         display: flex;
         align-items: center;
@@ -68,14 +87,16 @@
         img {
           &.left,
           &.right {
-            height: 25px;
+            height: 20px;
+            opacity: 0.8;
           }
           &.user {
-            height: 60px;
-            width: 60px;
+            height: 64px;
+            width: 64px;
             border-radius: 50%;
             object-fit: cover;
-            margin: 0 30px;
+            margin: 0 22px;
+            border: 2px solid rgba(14, 122, 109, 0.2);
 
             @include mobile {
               width: 30px;
@@ -85,16 +106,18 @@
         }
       }
       .center {
-        padding: 10px;
-        background-color: gray;
-        border-radius: 10px;
+        padding: 14px;
+        background-color: rgba(148, 163, 184, 0.16);
+        border-radius: 12px;
+        color: #324865;
+        line-height: 1.55;
 
         @include mobile {
           font-size: 12px;
           padding: 5px;
         }
       }
-      .bothom {
+      .bottom {
         display: flex;
         align-items: center;
         flex-direction: column;
@@ -102,6 +125,7 @@
 
         h3 {
           margin-bottom: 5px;
+          color: #13213a;
 
           @include mobile {
             font-size: 14px;
@@ -109,7 +133,7 @@
         }
 
         h4 {
-          color: gray;
+          color: #5b6b84;
 
           @include mobile {
             font-size: 13px;

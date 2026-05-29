@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./work.scss";
+import "./works.scss";
 import { ArrowLeft, ArrowRight } from "@mui/icons-material";
 
 export default function Works() {
@@ -9,22 +9,22 @@ export default function Works() {
     {
       id: "1",
       icon: "assets/mobile-phone.png",
-      title: "Web Design",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, qui",
+      title: "SaaS Web Platform",
+      desc: "Conversion-focused dashboards and marketing surfaces built for performance and growth.",
       img: "assets/project1.png",
     },
     {
       id: "2",
       icon: "assets/globe.png",
-      title: "Mobile Application",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, qui",
+      title: "Cross-Platform App",
+      desc: "Mobile-first product experiences designed for speed, retention, and long-term maintainability.",
       img: "assets/project2.png",
     },
     {
-      id: 3,
+      id: "3",
       icon: "assets/writing.png",
-      title: "Branding",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, qui",
+      title: "Brand Storytelling",
+      desc: "Clear visual systems and content direction that make products easier to trust and remember.",
       img: "assets/project3.png",
     },
   ];
@@ -39,6 +39,10 @@ export default function Works() {
 
   return (
     <div className="works" id="works">
+      <div className="heading">
+        <h1>What I Build</h1>
+        <p>End-to-end product work from interface strategy to polished delivery.</p>
+      </div>
       <div
         className="slider"
         style={{ transform: `translateX(-${currentSlide * 100}vw)` }}
@@ -53,7 +57,7 @@ export default function Works() {
                   </div>
                   <h2>{d.title}</h2>
                   <p>{d.desc}</p>
-                  <span>Projects</span>
+                  <span>View case study</span>
                 </div>
               </div>
               <div className="right">

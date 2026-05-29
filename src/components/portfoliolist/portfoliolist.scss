@@ -1,19 +1,33 @@
 @use "../../global.scss" as *;
-.portfoliolist{
-      font-size: 15px;
-      margin-right: 5opx;
-      padding:  7px;
-      border-radius: 10px;
-      cursor: pointer;
 
-    @include mobile{
-      margin-right: 2opx;
-    }
+.portfoliolist {
+  font-size: 14px;
+  margin-right: 4px;
+  padding: 9px 16px;
+  border-radius: 999px;
+  cursor: pointer;
+  border: 1px solid rgba(15, 23, 42, 0.14);
+  background: rgba(255, 255, 255, 0.9);
+  color: #2a3d59;
+  font-weight: 600;
+  transition: all 0.3s ease;
 
+  @include mobile {
+    margin-right: 6px;
+    padding: 7px 12px;
+    font-size: 13px;
+  }
 
-      &.active{
-        background-color: $mainColor;
-        color: white;
-      }
-      
-    }
+  &:hover {
+    transform: translateY(-2px);
+    border-color: rgba(15, 118, 110, 0.5);
+    color: $mainColor;
+  }
+
+  &.active {
+    background-color: $mainColor;
+    color: white;
+    border-color: $mainColor;
+    box-shadow: 0 8px 20px rgba(15, 118, 110, 0.24);
+  }
+}

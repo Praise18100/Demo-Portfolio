@@ -1,30 +1,49 @@
-* {
-  font-family: "Roboto", sans-serif;
-  margin: 0;
-}
-
 .app {
-  height: 100vh;
+  height: 100%;
+  overflow: hidden;
 
   .section {
     width: 100%;
     height: calc(100vh - 70px);
-    background-color: lightsalmon;
+    background-color: transparent;
     position: relative;
     top: 70px;
-    scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
-    overflow-x: clip;
-    scrollbar-width: none;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(14, 122, 109, 0.75) rgba(15, 37, 68, 0.12);
+
     &::-webkit-scrollbar {
-      display: none;
+      width: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: rgba(15, 37, 68, 0.12);
+      border-radius: 999px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: linear-gradient(180deg, #0e7a6d, #1b5d96);
+      border-radius: 999px;
+      border: 2px solid rgba(255, 255, 255, 0.45);
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: linear-gradient(180deg, #0c675d, #184f80);
     }
 
     > * {
-      width: 100vw;
-      height: 100vh;
+      width: 100%;
+      min-height: 100vh;
       scroll-snap-align: start;
+      padding: 104px 4vw 28px;
+
+      @media (max-width: 768px) {
+        min-height: auto;
+        padding: 88px 16px 28px;
+        scroll-snap-align: none;
+      }
     }
   }
 }

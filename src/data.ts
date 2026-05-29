@@ -1,27 +1,27 @@
 export const featuredPortfolio = [
   {
     id: 1,
-    title: "Social Media App",
+    title: "Creator Social Platform",
     img: "assets/rev2.png",
   },
   {
     id: 2,
-    title: "E-Commerce Website",
+    title: "E-Commerce Experience",
     img: "assets/rev2.png",
   },
   {
     id: 3,
-    title: "Portfolio Design",
+    title: "Portfolio Redesign",
     img: "assets/rev2.png",
   },
   {
     id: 4,
-    title: "Dashboard UI",
+    title: "Analytics Dashboard",
     img: "assets/rev2.png",
   },
   {
     id: 5,
-    title: "Mobile Banking App",
+    title: "Fintech Mobile Product",
     img: "assets/rev2.png",
   },
 ];
@@ -29,27 +29,27 @@ export const featuredPortfolio = [
 export const webPortfolio = [
   {
     id: 1,
-    title: "React Web App",
+    title: "Startup SaaS Website",
     img: "assets/rev2.png",
   },
   {
     id: 2,
-    title: "Landing Page",
+    title: "Campaign Landing Page",
     img: "assets/rev2.png",
   },
   {
     id: 3,
-    title: "Business Website",
+    title: "Corporate Platform",
     img: "assets/rev2.png",
   },
   {
     id: 4,
-    title: "Admin Panel",
+    title: "Operations Admin Panel",
     img: "assets/rev2.png",
   },
   {
     id: 5,
-    title: "Restaurant Website",
+    title: "Hospitality Website",
     img: "assets/rev2.png",
   },
 ];
@@ -57,27 +57,27 @@ export const webPortfolio = [
 export const mobilePortfolio = [
   {
     id: 1,
-    title: "Social Media App",
+    title: "Fitness Tracker App",
     img: "assets/rev2.png",
   },
   {
     id: 2,
-    title: "E-Commerce Website",
+    title: "Food Delivery App",
     img: "assets/rev2.png",
   },
   {
     id: 3,
-    title: "Portfolio Design",
+    title: "Creator Toolkit App",
     img: "assets/rev2.png",
   },
   {
     id: 4,
-    title: "Dashboard UI",
+    title: "Finance Companion App",
     img: "assets/rev2.png",
   },
   {
     id: 5,
-    title: "Mobile Banking App",
+    title: "Wellness Booking App",
     img: "assets/rev2.png",
   },
 ];
@@ -85,27 +85,27 @@ export const mobilePortfolio = [
 export const designPortfolio = [
   {
     id: 1,
-    title: "React Web App",
+    title: "Design System Foundations",
     img: "assets/rev2.png",
   },
   {
     id: 2,
-    title: "Landing Page",
+    title: "Product Landing Kit",
     img: "assets/rev2.png",
   },
   {
     id: 3,
-    title: "Business Website",
+    title: "Brand Web Refresh",
     img: "assets/rev2.png",
   },
   {
     id: 4,
-    title: "Admin Panel",
+    title: "Admin UX Redesign",
     img: "assets/rev2.png",
   },
   {
     id: 5,
-    title: "Restaurant Website",
+    title: "Conversion UI Audit",
     img: "assets/rev2.png",
   },
 ];
@@ -113,27 +113,27 @@ export const designPortfolio = [
 export const contentPortfolio = [
   {
     id: 1,
-    title: "Social Media App",
+    title: "SaaS Messaging Strategy",
     img: "assets/rev2.png",
   },
   {
     id: 2,
-    title: "E-Commerce Website",
+    title: "Launch Campaign Assets",
     img: "assets/rev2.png",
   },
   {
     id: 3,
-    title: "Portfolio Design",
+    title: "Founder Storytelling Pack",
     img: "assets/rev2.png",
   },
   {
     id: 4,
-    title: "Dashboard UI",
+    title: "Product Education Content",
     img: "assets/rev2.png",
   },
   {
     id: 5,
-    title: "Mobile Banking App",
+    title: "Social Media Creative Set",
     img: "assets/rev2.png",
   },
 ];

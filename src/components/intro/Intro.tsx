@@ -7,14 +7,20 @@ export default function Intro() {
   const textRef = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
+    let typedInstance: Typed | null = null;
+
     if (textRef.current) {
-      new Typed(textRef.current, {
+      typedInstance = new Typed(textRef.current, {
         typeSpeed: 69,
         loop: true,
         backSpeed: 69,
         strings: ["Developer", "Designer", "Content Creator"],
       });
     }
+
+    return () => {
+      typedInstance?.destroy();
+    };
   }, []);
 
   return (
@@ -27,14 +33,27 @@ export default function Intro() {
 
       <div className="right">
         <div className="wrapper">
-          <h2>Hi There, I'm</h2>
+          <p className="eyebrow">Digital Product Engineer</p>
+          <h2>Hi there, I'm</h2>
           <h1>AKENROYE Praise</h1>
           <h3>
-            Freelance <span ref={textRef} />
+            I build standout experiences as a <span ref={textRef} />
           </h3>
+          <p className="summary">
+            I help startups and growing brands launch beautiful, reliable web
+            products that users enjoy and teams can scale.
+          </p>
+          <div className="actions">
+            <a href="#portfolio" className="primaryBtn">
+              View Projects
+            </a>
+            <a href="#contact" className="ghostBtn">
+              Book a Call
+            </a>
+          </div>
         </div>
 
-        <a href="#portfolio">
+        <a href="#portfolio" className="scrollHint">
           <img src="assets/down.png" alt="down" />
         </a>
       </div>

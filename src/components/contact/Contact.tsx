@@ -12,18 +12,22 @@ export default function Contact() {
   return (
     <div className="contact" id="contact">
       <div className="left">
-        <img src="assets/hand-shake.png" alt="" />
+        <img src="assets/hand-shake.png" alt="Handshake illustration" />
       </div>
 
       <div className="right">
-        <h2>Contact.</h2>
+        <h2>Let's build your next product.</h2>
+        <p>
+          Share your idea, timeline, or current challenge. I will respond with
+          a clear next step.
+        </p>
 
         <form onSubmit={handleSubmit}>
-          <input type="text" placeholder="Email" />
-          <textarea placeholder="Message"></textarea>
+          <input type="email" placeholder="Email address" aria-label="Email address" required />
+          <textarea placeholder="Tell me about your project" aria-label="Project details" required></textarea>
           <button type="submit">Send</button>
 
-          {message && <span>Thanks. I'll reply ASAP 🙂</span>}
+          {message && <span>Thanks. I will reply as soon as possible.</span>}
         </form>
       </div>
     </div>

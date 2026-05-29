@@ -16,9 +16,9 @@ export default function Topbar({ menuOpen, setMenuOpen }: TopbarProps) {
           </a>
           <div className="itemcontainer">
             <Person className="icon" />
-            <span>+234 803 878 4620</span>
+            <a href="tel:+2348038784620">+234 803 878 4620</a>
             <Mail className="icon" />
-            <span>akenroyepraise@gmail.com</span>
+            <a href="mailto:akenroyepraise@gmail.com">akenroyepraise@gmail.com</a>
           </div>
         </div>
         <div className="right">

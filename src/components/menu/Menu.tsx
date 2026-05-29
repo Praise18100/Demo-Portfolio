@@ -1,4 +1,4 @@
-import "./menu.scss"
+import "./menu.scss";
 
 
 type MenuProps = {
@@ -6,27 +6,28 @@ type MenuProps = {
   setMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-export default function Menu({ menuOpen, setMenuOpen }: MenuProps) { 
+export default function Menu({ menuOpen, setMenuOpen }: MenuProps) {
   return (
     <div className={"menu " + (menuOpen && "active")}>
+      <p>Creative developer for modern digital products</p>
       <ul>
-        <li onClick={()=>setMenuOpen(false)}>
+        <li onClick={() => setMenuOpen(false)}>
           <a href="#intro">Home</a>
         </li>
-        <li onClick={()=>setMenuOpen(false)}>
+        <li onClick={() => setMenuOpen(false)}>
           <a href="#portfolio">Portfolio</a>
         </li>
-        <li onClick={()=>setMenuOpen(false)}>
+        <li onClick={() => setMenuOpen(false)}>
           <a href="#works">Works</a>
         </li>
-        <li onClick={()=>setMenuOpen(false)}>
+        <li onClick={() => setMenuOpen(false)}>
           <a href="#testimonials">Testimonials</a>
-        </li> 
-        <li onClick={()=>setMenuOpen(false)}>
+        </li>
+        <li onClick={() => setMenuOpen(false)}>
           <a href="#contact">Contact</a>
-        </li> 
+        </li>
       </ul>
-      
+
     </div>
-  )
+  );
 }

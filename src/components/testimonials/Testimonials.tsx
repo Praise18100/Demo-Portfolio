@@ -10,51 +10,52 @@ interface User {
   featured?: boolean;
 }
 
-export default function testimonials() {
+export default function Testimonials() {
   const data: User[] = [
     {
       id: 1,
       name: "Tom Durden",
-      title: "Senior Developer",
+      title: "Product Lead, Northstar Labs",
       img: "https://images.pexels.com/photos/1680172/pexels-photo-1680172.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
       icon: "assets/twitter.png",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam dolorem.",
+      desc: "Praise helped us simplify a complex product flow into a clean interface our users could adopt in days.",
     },
     {
       id: 2,
       name: "Alex Kalinski",
-      title: "Co-Founder of DELKA",
+      title: "Co-Founder, Delka Studio",
       img: "https://images.pexels.com/photos/428321/pexels-photo-428321.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-      icon: "assets/youtube.png",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam dolorem recusandae perspiciatis ducimus vel hic temporibus. ",
+      icon: "assets/twitter.png",
+      desc: "From design direction to final implementation, execution was fast, thoughtful, and detail-driven across every sprint.",
       featured: true,
     },
     {
       id: 3,
       name: "Martin Harold",
-      title: "CEO of ALBI",
+      title: "CEO, Albi Digital",
       img: "https://images.pexels.com/photos/3863793/pexels-photo-3863793.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
       icon: "assets/linkedin.png",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam dolorem",
+      desc: "We launched ahead of schedule with a premium look and better performance metrics than our previous platform.",
     },
   ];
 
   return (
     <div className="testimonials" id="testimonials">
       <h1>Testimonials</h1>
+      <p>A few words from teams I have partnered with recently.</p>
       <div className="container">
         {data.map((item) => {
           return (
-            <div className={item.featured ? "card featured" : "card"}>
+            <div className={item.featured ? "card featured" : "card"} key={item.id}>
               <div className="top">
                 <img src="assets/arrow.png" className="left" alt="" />
-                <img className="user" src={item.img} alt="" />
-                <img className="right" src={item.icon} alt="" />
+                <img className="user" src={item.img} alt={item.name} />
+                <img className="right" src={item.icon} alt="social icon" />
               </div>
               <div className="center">{item.desc}</div>
               <div className="bottom">
                 <h3>{item.name}</h3>
-                <h3>{item.title}</h3>
+                <h4>{item.title}</h4>
               </div>
             </div>
           );
